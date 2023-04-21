@@ -1,0 +1,21 @@
+#Conception of the game Turret Annihilator 3000
+
+##Personal changes made to the proposed architecture
+- When a random map is generated, the boss room is similar to the turret room, but has two more turrets that shoot 
+  in all 4 directions. This was just edited in order to add difficulty to the game. The class is named Level0BossRoom and
+  it is in the package ch.epfl.cs107.play.game.icrogue.area.level0.rooms.
+
+##Personal modifications
+- A message of type TextGraphics was added as an attribute to ICRoguePlayer, indicating the remaining lives.
+- Arrows thrown by turrets damage the player from distance and by contact. This way, the arrow consume one cell before the player's one
+  and it seems like the arrowhead hit the player. However, the interaction by contact was kept and the player also receives damage if it is in the same cell
+  that the arrow.
+- The fire created while holding the staff is created in the cell in front of the player instead of in his 
+  position.
+
+## Added extensions
+- With the actors that was possible, the corresponding sprite was replaced with a set of Sprites resulting in an Animation type (staff, fire, 
+player, player with staff).
+- When the player grabs the staff, its animation changes to the one holding the staff.
+
+
